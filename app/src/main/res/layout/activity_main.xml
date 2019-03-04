@@ -102,8 +102,8 @@
                 <TextView
                     android:id="@+id/tv_date"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="24dp"
+                    android:layout_height="19dp"
+                    android:layout_marginLeft="26dp"
                     android:text="03/03/2018"
                     android:textColor="@android:color/white" />
 
@@ -111,9 +111,9 @@
 
             <RelativeLayout
                 android:id="@+id/tv_temperature"
-                android:layout_width="234dp"
+                android:layout_width="225dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="36dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginRight="40dp"
                 android:layout_toRightOf="@id/linearLayout"
                 android:gravity="right">
@@ -121,16 +121,16 @@
 
                 <TextView
                     android:id="@+id/temperature_of_the_day"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="207dp"
+                    android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginEnd="0dp"
-                    android:layout_marginRight="0dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginRight="1dp"
                     android:gravity="right"
                     android:text="28"
                     android:textColor="@android:color/white"
@@ -146,6 +146,44 @@
                     android:text="°C"
                     android:textColor="@android:color/white"
                     android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="62dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/temperature_of_the_day"
+                    android:layout_alignRight="@id/temperature_of_the_day"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="79dp"
+                    android:gravity="left"
+                    android:text="CURRENT:"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="59dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/temperature_of_the_day"
+                    android:layout_alignRight="@id/temperature_of_the_day"
+                    android:layout_marginTop="114dp"
+                    android:layout_marginRight="83dp"
+                    android:gravity="left"
+                    android:text="FORECAST:"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/t0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/temperature_of_the_day"
+                    android:layout_alignRight="@id/temperature_of_the_day"
+                    android:layout_marginTop="124dp"
+                    android:layout_marginRight="1dp"
+                    android:gravity="center_horizontal"
+                    android:text="FORECAST:"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
 
 
             </RelativeLayout>
@@ -199,6 +237,16 @@
                 android:text="mon"
                 android:textAllCaps="true"
                 android:textColor="#909090" />
+
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="mon"
+                android:textAllCaps="true"
+                android:textColor="#909090" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -223,6 +271,16 @@
                 android:text="tue"
                 android:textAllCaps="true"
                 android:textColor="#909090" />
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="tue"
+                android:textAllCaps="true"
+                android:textColor="#909090" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -247,6 +305,16 @@
                 android:text="thu"
                 android:textAllCaps="true"
                 android:textColor="#909090" />
+
+            <TextView
+                android:id="@+id/t3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="thu"
+                android:textAllCaps="true"
+                android:textColor="#909090" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -271,6 +339,16 @@
                 android:text="fri"
                 android:textAllCaps="true"
                 android:textColor="#909090" />
+
+            <TextView
+                android:id="@+id/t4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="fri"
+                android:textAllCaps="true"
+                android:textColor="#909090" />
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

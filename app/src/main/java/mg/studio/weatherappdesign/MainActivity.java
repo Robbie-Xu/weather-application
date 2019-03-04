@@ -67,10 +67,20 @@ public class MainActivity extends AppCompatActivity {
         public String weather3;
         public String weather4;
         public String d0;
+        public String d0_l;
+        public String d0_h;
         public String d1;
+        public String d1_l;
+        public String d1_h;
         public String d2;
+        public String d2_l;
+        public String d2_h;
         public String d3;
+        public String d3_l;
+        public String d3_h;
         public String d4;
+        public String d4_l;
+        public String d4_h;
         WeatherInfo(){
 
         }
@@ -146,24 +156,38 @@ public class MainActivity extends AppCompatActivity {
             JSONArray next = dataJson.getJSONArray("weather_next");
             JSONObject nextdata = next.getJSONObject(0);
             weatherInfo.date = nextdata.getString("fi");
-
+            weatherInfo.d0_l = nextdata.getString("fd");
+            weatherInfo.d0_h = nextdata.getString("fc");
             nextdata = next.getJSONObject(1);
             weatherInfo.weather1 = chooseWeather(nextdata.getString("fa"));
             weatherInfo.d0 = nextdata.getString("fj");
             weatherInfo.d1 = nextdata.getString("fi");
+            weatherInfo.d1_l = nextdata.getString("fd");
+            weatherInfo.d1_h = nextdata.getString("fc");
             nextdata = next.getJSONObject(2);
             weatherInfo.weather2 = chooseWeather(nextdata.getString("fa"));
             weatherInfo.d2 = nextdata.getString("fi");
+            weatherInfo.d2_l = nextdata.getString("fd");
+            weatherInfo.d2_h = nextdata.getString("fc");
             nextdata = next.getJSONObject(3);
             weatherInfo.weather3 =chooseWeather(nextdata.getString("fa"));
             weatherInfo.d3 = nextdata.getString("fi");
+            weatherInfo.d3_l = nextdata.getString("fd");
+            weatherInfo.d3_h = nextdata.getString("fc");
             nextdata = next.getJSONObject(4);
             weatherInfo.weather4 = chooseWeather(nextdata.getString("fa"));
             weatherInfo.d4 = nextdata.getString("fi");
+            weatherInfo.d4_l = nextdata.getString("fd");
+            weatherInfo.d4_h = nextdata.getString("fc");
 
             ApplicationInfo appInfo = getApplicationInfo();
             ((TextView) findViewById(R.id.temperature_of_the_day)).setText(weatherInfo.temp);
             ((TextView) findViewById(R.id.tv_location)).setText("重庆");
+            ((TextView) findViewById(R.id.t0)).setText(weatherInfo.d0_l+" ~ "+weatherInfo.d0_h+" °C");
+            ((TextView) findViewById(R.id.t1)).setText(weatherInfo.d1_l+" ~ "+weatherInfo.d1_h+" °C");
+            ((TextView) findViewById(R.id.t2)).setText(weatherInfo.d2_l+" ~ "+weatherInfo.d2_h+" °C");
+            ((TextView) findViewById(R.id.t3)).setText(weatherInfo.d3_l+" ~ "+weatherInfo.d3_h+" °C");
+            ((TextView) findViewById(R.id.t4)).setText(weatherInfo.d4_l+" ~ "+weatherInfo.d4_h+" °C");
             ((TextView) findViewById(R.id.tv_date)).setText("2019/"+weatherInfo.date);
             ((ImageView) findViewById(R.id.img_weather_condition)).setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),getResources().getIdentifier(weatherInfo.weather,"drawable",appInfo.packageName)));
             ((ImageView) findViewById(R.id.img_weather_condition1)).setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),getResources().getIdentifier(weatherInfo.weather1,"drawable",appInfo.packageName)));
