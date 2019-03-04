@@ -1,5 +1,8 @@
+## Weather application
+
 This is a weather app developed base on https://github.com/dragona/weather-application.
-It use an api from http://www.shujuzhihui.cn/apiDetails?id=2030.
+
+It use an api from http://www.shujuzhihui.cn/apiDetails?id=2030, which is http://api.shujuzhihui.cn/api/weather/dailyweather?appKey=efcdee809802446f9e3c5f291195052f&city=Chongqing
 
 Expected: application behavior:
 Each time the application has started, it will update the presented weather with the correct forecast of the day.
